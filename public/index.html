@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MentorAI</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #475569;
+            border-radius: 999px;
+        }
+
+
+        .prose h1,
+        .prose h2,
+        .prose h3 {
+            margin-top: 1rem;
+            margin-bottom: .75rem;
+            font-weight: 700;
+        }
+
+        .prose p {
+            margin-bottom: .75rem;
+            line-height: 1.7;
+        }
+
+        .prose pre {
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        .prose code:not(pre code) {
+            background: rgba(255, 255, 255, .08);
+            padding: .15rem .35rem;
+            border-radius: 6px;
+        }
+    </style>
+
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-violet-950 text-white">
+
+    <div class="mx-auto flex min-h-screen max-w-7xl items-center justify-center p-6">
+
+        <div
+            class="flex h-[94vh] w-full max-w-7xl flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-[0_25px_80px_rgba(0,0,0,.45)]">
+            <!-- Header -->
+
+            <header class="border-b border-white/10 px-8 py-7">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <h1 class="text-4xl font-extrabold tracking-tight">
+                            Mentor<span class="text-violet-400">AI</span>
+                        </h1>
+
+                        <p class="mt-2 text-slate-300 max-w-xl">
+                            Learn software engineering through AI-powered conversations inspired by experienced mentors.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- Mentor -->
+
+            <section class="border-b border-white/10 px-8 py-5">
+
+                <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="rounded-2xl bg-violet-500/15 p-4">
+
+                            <i data-lucide="graduation-cap" class="h-6 w-6 text-violet-300"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-xs uppercase tracking-[0.2em] text-slate-400">
+                                Learning With
+                            </p>
+
+                            <h2 id="mentor-name" class="mt-1 text-xl font-semibold">
+
+                                Hitesh Choudhary
+
+                            </h2>
+
+                            <p id="mentor-role" class="text-sm text-slate-400">
+
+                                AI Software Engineering Mentor
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <select id="mentor"
+                        class="rounded-xl border border-white/10 bg-slate-800 px-4 py-3 text-white outline-none transition duration-200 hover:border-violet-400 focus:border-violet-500">
+
+                        <option value="hitesh">
+                            Hitesh Choudhary
+                        </option>
+
+                        <option value="piyush">
+                            Piyush Garg
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+            <!-- Conversation -->
+
+            <main id="chat-window" class="flex-1 overflow-y-auto px-10 py-10">
+
+                <div id="welcome-card" class="rounded-3xl border border-white/10 bg-slate-900/50 p-8">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="rounded-full bg-violet-500/20 p-3">
+
+                            <i data-lucide="graduation-cap" class="h-5 w-5 text-violet-300"></i>
+
+                        </div>
+
+                        <div>
+                            <h3 id="welcome-title" class="text-xl font-semibold">
+
+                                Welcome to MentorAI
+
+                            </h3>
+
+                            <p id="welcome-description" class="mt-2 leading-7 text-slate-400">
+
+                                You're currently learning with
+                                <span class="font-medium text-violet-300">
+                                    Hitesh Choudhary
+                                </span>.
+
+                                Ask anything about backend development,
+                                Docker, APIs, DevOps, databases,
+                                system design or software engineering.
+
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8 grid gap-4 md:grid-cols-2">
+
+                        <div
+                            class="cursor-pointer rounded-2xl border border-white/10 bg-slate-800/40 p-5 transition-all duration-200 hover:border-violet-500/40 hover:bg-slate-800">
+
+                            <p class="font-medium">
+                                Explain Docker like I'm a beginner.
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="cursor-pointer rounded-2xl border border-white/10 bg-slate-800/40 p-5 transition-all duration-200 hover:border-violet-500/40 hover:bg-slate-800">
+
+                            <p class="font-medium">
+                                How do REST APIs work internally?
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="cursor-pointer rounded-2xl border border-white/10 bg-slate-800/40 p-5 transition-all duration-200 hover:border-violet-500/40 hover:bg-slate-800">
+
+                            <p class="font-medium">
+                                Teach me System Design from scratch.
+                            </p>
+
+                        </div>
+
+                        <div
+                            class="cursor-pointer rounded-2xl border border-white/10 bg-slate-800/40 p-5 transition-all duration-200 hover:border-violet-500/40 hover:bg-slate-800">
+
+                            <p class="font-medium">
+                                Difference between Redis and RabbitMQ?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </main>
+
+            <!-- Footer -->
+
+            <footer class="border-t border-white/10 p-6">
+
+                <div class="flex flex-col gap-4 md:flex-row">
+
+                    <textarea id="message" rows="2" placeholder="Ask your mentor anything..."
+                        class="flex-1 resize-none rounded-2xl border border-white/10 bg-slate-900/60 px-5 py-4 outline-none transition-all duration-200 focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"></textarea>
+
+                    <button id="send-btn"
+                        class="rounded-2xl bg-violet-600 px-8 py-4 font-semibold transition-all duration-200 hover:bg-violet-500 hover:shadow-lg hover:shadow-violet-500/20 active:scale-95">
+
+                        Send
+
+                    </button>
+
+                </div>
+
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Highlight -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+    <!-- Your App -->
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

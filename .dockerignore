@@ -1,0 +1,37 @@
+# Git
+.git
+.gitignore
+
+# Node Modules
+node_modules/
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.*
+
+# Documentation
+README.md
+docs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Tests
+coverage/
+
+# Docker
+docker-compose.yml
+
+# Misc
+tmp/
+temp/
+.cache/
