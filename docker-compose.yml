@@ -1,0 +1,17 @@
+services:
+  mentor-ai:
+    build: 
+      context: .
+
+    container_name: mentor-ai
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env  
+    networks:
+      - app-networks
+
+networks:
+  app-networks:
+    driver: bridge      
