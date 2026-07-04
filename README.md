@@ -1,7 +1,5 @@
 # MentorAI
 
-# MentorAI
-
 An AI-powered chatbot that simulates conversations with **Hitesh Choudhary** and **Piyush Garg** using OpenAI, persona engineering, and contextual prompting.
 
 ![Persona AI](https://img.shields.io/badge/Project-Persona%20AI-purple)
@@ -15,7 +13,9 @@ An AI-powered chatbot that simulates conversations with **Hitesh Choudhary** and
 
 
 ![Live Demo](https://img.shields.io/badge/Live-Demo-success)
+
 <!-- ![License](https://img.shields.io/badge/License-MIT-blue) -->
+<a href="https://mentorai.akashbharnuke.tech">🌐 Live Demo</a>
 ---
 
 ## Overview
@@ -28,6 +28,17 @@ Unlike traditional AI chat applications, MentorAI focuses on recreating each men
 
 ---
 
+![MentorAI](docs/mentorai-home.png)
+
+---
+
+## Key Highlights
+
+- 🎭 Two AI mentor personas with distinct teaching styles
+- 🧠 Prompt engineering without LangChain or other orchestration frameworks
+- 💬 Multi-turn conversational context
+- ⚡ Built using Vanilla JavaScript, Express, and OpenAI
+- 🐳 Dockerized and deployed on a VPS using Nginx
 
 ---
 
@@ -113,7 +124,7 @@ mentor-ai/
 
 ## Architecture
 
-The application follows a simple layered architecture.
+The application follows a lightweight layered architecture where the frontend manages conversation state and the backend remains stateless.
 
 ```text
 Browser
@@ -180,7 +191,9 @@ npm install
 
 ### 3. Configure Environment Variables
 
-Create a `.env` file.
+Copy the provided environment template.
+
+cp .env.example .env
 
 ```env
 PORT=3000
@@ -215,23 +228,8 @@ http://localhost:3000
 Build and run using Docker Compose.
 
 ```bash
-docker compose up --build
+docker compose up -d --build
 ```
-
----
-
-## Assignment Requirements
-
-* ✅ Live deployed website
-* ✅ Public GitHub repository
-* ✅ LLM-powered chat interface
-* ✅ Switch between Hitesh Choudhary and Piyush Garg
-* ✅ Persona-based responses
-* ✅ Prompt engineering
-* ✅ Context management
-* ✅ Sample conversations
-* ✅ Documentation
-* ✅ Setup instructions
 
 ---
 
@@ -239,11 +237,9 @@ docker compose up --build
 
 * Conversation persistence
 * Streaming AI responses
-* Authentication
 * Conversation history
 * Additional mentor personas
 * Response regeneration
-* Voice interaction
 
 ---
 
@@ -255,6 +251,3 @@ The mentor personas are inspired by the publicly available educational content o
 
 ---
 
-## License
-
-This project is intended for educational and demonstration purposes.
